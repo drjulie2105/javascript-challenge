@@ -21,3 +21,16 @@ data.forEach(function(UFOSighting) {
         console.log(key, value);
       });
     });
+
+
+data.forEach(function(UFOSighting) {
+    console.log(UFOSighting);
+    var row = tbody.append("tr");
+        
+    Object.entries(UFOSighting).forEach(function([key, value]) {
+        console.log(key, value);
+        var cell = row.append("td");
+        
+        cell.text(value);
+        });
+      });
